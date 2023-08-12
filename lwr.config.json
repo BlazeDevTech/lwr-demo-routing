@@ -6,6 +6,18 @@
             "path": "/",
             "layoutTemplate":"$layoutsDir/main.html",
             "rootComponent": "example/app"
+        }, 
+        {
+            "id": "animal",
+            "path": "/animal",
+            "layoutTemplate":"$layoutsDir/main.html",
+            "rootComponent": "example/app"
+        }, 
+        {
+            "id": "animals",
+            "path": "/animal/:animalType",
+            "layoutTemplate":"$layoutsDir/main.html",
+            "rootComponent": "example/app"
         }
     ],
     "assets": [

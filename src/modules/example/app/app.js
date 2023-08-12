@@ -14,6 +14,13 @@ const routes = [
         },
     },
     {
+        id: "animal",
+        uri: "/animal",
+        handler: () => import("example/animalPageHandler"),
+        page: { type: "animal" },
+        exact: false, // indicates that "example/animal" contains a child router
+    },
+    {
         id: 'namedPage',
         uri: '/:pageName',
         handler: () => import('example/namedPageHandler'),
@@ -31,6 +38,7 @@ export default class App extends LightningElement {
 
     homeReference = { type: 'home' }; // Home page reference for the page-link
     contactReference = {type:'namedPage',attributes:{pageName:'contact'}};
+    animalPageReference = {type:'animal'};
     productsReference = {type:'namedPage',attributes:{pageName:'products'}};
     recipesReference = {type:'namedPage',attributes:{pageName:'recipes'}};
 }

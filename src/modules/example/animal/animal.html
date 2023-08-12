@@ -1,0 +1,11 @@
+<template>
+    this is animal page
+    <!-- child router -->
+    <lwr-router-container router={childRouter}>
+        <!-- outputs child router view components -->
+        <br>
+        <example-page-link label="animalCat" page-reference={animalPageReference}></example-page-link>
+        <example-page-link label="animalDog" page-reference={animalPageReference2}></example-page-link>
+        <lwr-outlet></lwr-outlet>
+    </lwr-router-container>
+</template>
