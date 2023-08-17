@@ -21,6 +21,19 @@ const routes = [
         exact: false, // indicates that "example/animal" contains a child router
     },
     {
+        id: 'employee',
+        uri: 'employee/:empId',
+        handler: () => import('example/employeePageHandler'),
+        page: {
+            type: 'employee',
+            attributes: {
+                pageName: 'employee',
+                empId: ':empId',
+            },
+            
+        },
+    },
+    {
         id: 'namedPage',
         uri: '/:pageName',
         handler: () => import('example/namedPageHandler'),
@@ -30,7 +43,7 @@ const routes = [
                 pageName: ':pageName',
             },
         },
-    },
+    }
 ];
 
 export default class App extends LightningElement {
@@ -39,6 +52,7 @@ export default class App extends LightningElement {
     homeReference = { type: 'home' }; // Home page reference for the page-link
     contactReference = {type:'namedPage',attributes:{pageName:'contact'}};
     animalPageReference = {type:'animal'};
+    employeePageReference = {type:'employee',attributes:{pageName:'employee',empId:'1234'}};
     productsReference = {type:'namedPage',attributes:{pageName:'products'}};
     recipesReference = {type:'namedPage',attributes:{pageName:'recipes'}};
 }

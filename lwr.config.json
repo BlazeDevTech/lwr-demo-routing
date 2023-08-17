@@ -18,6 +18,12 @@
             "path": "/animal/:animalType",
             "layoutTemplate":"$layoutsDir/main.html",
             "rootComponent": "example/app"
+        },
+        {
+            "id": "employee",
+            "path": "/employee/:empId",
+            "layoutTemplate":"$layoutsDir/main.html",
+            "rootComponent": "example/app"
         }
     ],
     "assets": [
